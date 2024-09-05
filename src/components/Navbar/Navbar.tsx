@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import  image1  from "./image.png";
+import image1 from './image.png';
+
 const Navbar: React.FC = () => {
   const { isLoggedIn, userRole, logout } = useAuth();
   const navigate = useNavigate();
@@ -17,21 +18,26 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-[#8a7964] shadow-lg">
+    <nav className="bg-[#b39d7f94] shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
+          {/* Left - Logo */}
           <div className="flex space-x-4">
             <div>
               <Link to="/" className="flex items-center py-5 px-2 text-white">
-                <img
-                  className="h-12 w-full mr-2"
-                  src={image1}
-                  alt="Logo"
-                />
+                <img className="h-12 w-full mr-2" src={image1} alt="Logo" />
               </Link>
             </div>
           </div>
 
+          {/* Center - About Us */}
+          <div className="flex justify-center flex-grow">
+            <Link to="/aboutus" className="py-5 px-3 text-white hover:text-gray-200">
+              About Us
+            </Link>
+          </div>
+
+          {/* Right - Links for Login, Register, or User Menu */}
           <div className="flex items-center space-x-1">
             {!isLoggedIn ? (
               <>

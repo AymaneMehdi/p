@@ -26,7 +26,7 @@ export const Login: React.FC = () => {
       const response = await loginUser(formData);
       login(formData.userName, response.token, response.role);
       toast.success('Login successful!');
-      navigate('/dashboard');
+      navigate('/');
     } catch (error) {
       console.error(error);
       toast.error('Login failed. Please check your credentials.');

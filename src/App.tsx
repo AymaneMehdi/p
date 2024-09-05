@@ -20,6 +20,7 @@ import  BecomeSeller  from './pages/becomeSeller/BecomeSeller';
 import GigDetails from './pages/gigDetails/GigDetails';
 import EditGig from './pages/editGig/EditGig';
 import UserProfile from './pages/profile/UserProfile';
+import  AboutUs  from './pages/aboutus/AboutUs';
 
 
 
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
       { path: "/add", element: <Add /> },
       { path: "/gig/:id", element: <Gig /> },
       { path: "/gigs", element: <Gigs /> },
+      { path: "/aboutus", element: <AboutUs /> },
       { path: "/dashboard", element: <Dashboard /> },
       { path: "/messages", element: <Messages /> },
       { path: "/messages/:id", element: <Message /> },
